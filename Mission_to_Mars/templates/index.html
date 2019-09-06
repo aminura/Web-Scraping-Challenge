@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Mars Data Scraping</title>
+</head>
+
+<body style="background:black;">
+    <div class="container" style="background:black;">
+        <div class="jumbotron text-center" style="width: 100%;">
+            <h1>Mars Data Scraping</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        </div>
+        <h1 style="color:white; text-align:center; margin-bottom:30px; border-bottom:1px solid white; padding-bottom:10px;">
+            Mars Information
+        </h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Latest Mars News</h3>
+                    </div>
+                    <div class="panel-body">
+                        <h4>{{ mars_info.news_title }}</h4>
+                        <p>{{ mars_info.news_paragraph }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Latest Mars Weather</h3>
+                    </div>
+                    <div class="panel-body">
+                        <img src = "https://www.wral.com/mars-spacecraft-go-quiet-during-solar-conjunction/18595551/" alt="Mars Weather">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Mars Facts</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table>
+                            <table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>Parameter</th>      <th>Values</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>Equatorial Diameter:</td>      <td>6,792 km</td>    </tr>    <tr>      <th>1</th>      <td>Polar Diameter:</td>      <td>6,752 km</td>    </tr>    <tr>      <th>2</th>      <td>Mass:</td>      <td>6.39 × 10^23 kg (0.11 Earths)</td>    </tr>    <tr>      <th>3</th>      <td>Moons:</td>      <td>2 (Phobos &amp; Deimos)</td>    </tr>    <tr>      <th>4</th>      <td>Orbit Distance:</td>      <td>227,943,824 km (1.38 AU)</td>    </tr>    <tr>      <th>5</th>      <td>Orbit Period:</td>      <td>687 days (1.9 years)</td>    </tr>    <tr>      <th>6</th>      <td>Surface Temperature:</td>      <td>-87 to -5 °C</td>    </tr>    <tr>      <th>7</th>      <td>First Record:</td>      <td>2nd millennium BC</td>    </tr>    <tr>      <th>8</th>      <td>Recorded By:</td>      <td>Egyptian astronomers</td>    </tr>  </tbody></table>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 style="color:white; text-align:center; margin-bottom:30px; border-bottom:1px solid white; padding-bottom:10px;">
+            Mars Images
+        </h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Featured Image</h3>
+                    </div>
+                    <div class="panel-body">
+                        <img src= "https://www.jpl.nasa.gov//spaceimages/images/largesize/PIA23354_hires.jpg" alt="Featured Image" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Mars Hemispheres</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="thumbnail" style="width: 50%; float:left;">
+                            <img src= "https://astropedia.astrogeology.usgs.gov/download/Mars/Viking/cerberus_enhanced.tif/full.jpg" alt="Hemisphere1">
+                            <div class="caption">
+                                <h4> Cerberus Hemisphere</h4>
+                            </div>
+                        </div>
+                        <div class="thumbnail" style="width: 50%; float:left;">
+                            <img src= "https://astropedia.astrogeology.usgs.gov/download/Mars/Viking/schiaparelli_enhanced.tif/full.jpg" alt="Hemisphere2">
+                            <div class="caption">
+                                <h4>Schiaparelli Hemisphere</h4>
+                            </div>
+                        </div>
+                        <div class="thumbnail" style="width: 50%; float:left;">
+                            <img src= "https://astropedia.astrogeology.usgs.gov/download/Mars/Viking/syrtis_major_enhanced.tif/full.jpg" alt="Hemisphere3">
+                            <div class="caption">
+                                <h4>Syrtis Major Hemisphere</h4>
+                            </div>
+                        </div>
+                        <div class="thumbnail" style="width: 50%; float:left;">
+                            <img src= "https://astropedia.astrogeology.usgs.gov/download/Mars/Viking/valles_marineris_enhanced.tif/full.jpg" alt="Hemisphere4">
+                            <div class="caption">
+                                <h4>Valles Marineris Hemisphere</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
